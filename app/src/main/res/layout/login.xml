@@ -17,8 +17,63 @@
         android:layout_gravity="center"
         />
 
-        
-    
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Username"
+        android:drawableStart="@drawable/baseline_person_outline_24"
+        android:paddingStart="10dp"
+        android:drawablePadding="10dp"
+        android:inputType="text"
+        android:backgroundTint="@color/teal_200"
+        android:layout_marginBottom="16dp"
+        android:padding="10dp"
+        android:background="@drawable/custom_edittext_background" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:drawableStart="@drawable/baseline_password_24"
+        android:paddingStart="10dp"
+        android:drawablePadding="10dp"
+        android:inputType="textPassword"
+        android:backgroundTint="@color/teal_200"
+        android:layout_marginBottom="24dp"
+        android:padding="10dp"
+        android:background="@drawable/custom_edittext_background" />
+
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Iniciar Sesión"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/teal_700"
+        android:layout_marginBottom="16dp"
+        android:padding="12dp" />
+
+    <TextView
+        android:id="@+id/register_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¿No tienes una cuenta?"
+        android:textColor="@android:color/black"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:id="@+id/register_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Regístrate"
+        android:textColor="@color/teal_700"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_marginTop="4dp" />
+
+
     
 
 </LinearLayout>
