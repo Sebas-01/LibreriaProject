@@ -3,6 +3,7 @@ package com.sebas.libreria;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
+import android.database.Cursor;
 
 public class userCRUD {
     private dbLibrary dblibrary;
@@ -21,4 +22,15 @@ public class userCRUD {
 
         return db.insert("user",null,values);
     }
+
+    public Cursor getAllUsers(){
+        SQLiteDatabase db = dblibrary.getReadableDatabase();
+        return db.query("user",null,null,null,null,null,null);
+    }
+
+    public int updateUser(int iduser, String name, String email, String password, int status){
+        SQLiteDatabase db = dblibrary.getWritableDatabase();
+        return 
+    }
+
 }
