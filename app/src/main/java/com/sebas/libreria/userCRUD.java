@@ -30,7 +30,7 @@ public class userCRUD {
 
     public int updateUser(int iduser, String name, String email, String password, int status){
         SQLiteDatabase db = dblibrary.getWritableDatabase();
-        return 
+        return
     }
 
 }

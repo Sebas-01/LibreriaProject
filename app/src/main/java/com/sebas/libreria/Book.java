@@ -1,10 +1,21 @@
 package com.sebas.libreria;
 
 public class Book {
+
+    //atributos de la clase libro
+
+    private Integer idbook;
     private String text;
     private String cost;
     private  Integer available;
-    private Integer idbook;
+
+    //constructor con argumentos
+    public Book(){
+        this.idbook = idbook;
+        this.text = text;
+        this.cost = cost;
+        this.available = available;
+    }
 
     public Integer getIdbook() {
         return idbook;
@@ -36,5 +47,15 @@ public class Book {
 
     public void setAvailable(Integer available) {
         this.available = available;
+    }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "idbook=" + idbook +
+                ", text='" + text + '\'' +
+                ", cost='" + cost + '\'' +
+                ", available=" + available +
+                '}';
     }
 }
