@@ -1,11 +1,13 @@
 package com.sebas.libreria;
 
-public class User {
+public class GetSetUser {
     private String name;
     private String email;
     private String password;
     private Integer idUser;
     private Integer status;
+
+    private Integer role;
 
     public String getName() {
         return name;
@@ -45,5 +47,13 @@ public class User {
 
     public void setStatus(Integer status) {
         this.status = status;
+    }
+
+    public Integer getRole() {
+        return role;
+    }
+
+    public void setRole(Integer role) {
+        this.role = role;
     }
 }

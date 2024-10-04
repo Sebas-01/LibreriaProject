@@ -1,6 +1,6 @@
 package com.sebas.libreria;
 
-public class Rent {
+public class GetSetRent {
     private Integer idrent;
     private String date;
     private Integer iduser;

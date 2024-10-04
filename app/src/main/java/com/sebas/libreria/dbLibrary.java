@@ -7,15 +7,13 @@ import android.database.sqlite.SQLiteOpenHelper;
 import androidx.annotation.Nullable;
 
 public class dbLibrary extends SQLiteOpenHelper {
-    String tblUser = "Create table user(idUser integer primary key AUTOINCREMENT, name text, email text, password text, status integer)";
+    String tblUser = "Create table user(idUser integer primary key AUTOINCREMENT, name text, email text, password text, status integer,role integer)";
     String tblBook = "Create table book(idBook INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, cost text, available INTEGER)";
     String tblRent = "Create table rent(idrent INTEGER PRIMARY KEY AUTOINCREMENT, iduser INTEGER, idbook INTEGER, date TEXT, FOREIGN KEY(iduser) REFERENCES user(idUser), FOREIGN KEY(idbook) REFERENCES book(idBook))";
 
-    public dbLibrary(Context context,String name, SQLiteDatabase.CursorFactory factory, int version, String tblUser, String tblBook, String tblRent) {
+
+    public dbLibrary(Context context,  String name,  SQLiteDatabase.CursorFactory factory, int version, String tblUser, String tblBook, String tblRent) {
         super(context, name, factory, version);
-        this.tblUser = tblUser;
-        this.tblBook = tblBook;
-        this.tblRent = tblRent;
     }
 
     @Override

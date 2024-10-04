@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
-import com.sebas.libreria.Book;
+import com.sebas.libreria.GetSetBook;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 public class BookBD extends SQLiteOpenHelper implements ILibroBD {
 
     Context contexto;
-    private List<Book> libroList = new ArrayList<>();
+    private List<GetSetBook> libroList = new ArrayList<>();
 
     public BookBD(@Nullable Context context, @Nullable String name,@Nullable SQLiteDatabase.CursorFactory factory, int version){
 
@@ -50,7 +50,7 @@ public class BookBD extends SQLiteOpenHelper implements ILibroBD {
     }
 
     @Override
-    public Book elemento(int idbook) {
+    public GetSetBook elemento(int idbook) {
         SQLiteDatabase database = getReadableDatabase();
         Cursor cursor = database.rawQuery( "SELECT * FROM Book WHERE _idbook=" + idbook, null);
         try {
@@ -67,8 +67,8 @@ public class BookBD extends SQLiteOpenHelper implements ILibroBD {
         }
     }
 
-    private Book extraerBook(Cursor cursor) {
-        Book book = new Book();
+    private GetSetBook extraerBook(Cursor cursor) {
+        GetSetBook book = new GetSetBook();
         book.setIdbook(cursor.getInt( 0));
         book.setText(cursor.getString( 1));
         book.setCost(cursor.getString( 2));
@@ -78,7 +78,7 @@ public class BookBD extends SQLiteOpenHelper implements ILibroBD {
     }
 
     @Override
-    public Book elemento(String text) {
+    public GetSetBook elemento(String text) {
         SQLiteDatabase database = getReadableDatabase();
         Cursor cursor = database.rawQuery( "SELECT * FROM Book WHERE text='" + text + "'", null);
         try {
@@ -96,17 +96,17 @@ public class BookBD extends SQLiteOpenHelper implements ILibroBD {
     }
 
     @Override
-    public List<Book> Lista() {
+    public List<GetSetBook> Lista() {
         return null;
     }
 
     @Override
-    public void agregar(Book book) {
+    public void agregar(GetSetBook book) {
 
     }
 
     @Override
-    public void actualizar(int idbook, Book book) {
+    public void actualizar(int idbook, GetSetBook book) {
 
     }
 

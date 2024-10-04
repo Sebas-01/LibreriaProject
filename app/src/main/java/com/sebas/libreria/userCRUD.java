@@ -9,7 +9,7 @@ public class userCRUD {
     private dbLibrary dblibrary;
 
     public userCRUD(Context context){
-        dblibrary = new dbLibrary(context);
+
     }
 
     public long insertUser(String name, String email, String password, int status){
@@ -30,7 +30,12 @@ public class userCRUD {
 
     public int updateUser(int iduser, String name, String email, String password, int status){
         SQLiteDatabase db = dblibrary.getWritableDatabase();
-        return
+        ContentValues values = new ContentValues();
+        values.put("name", name);
+        values.put("email", email);
+        values.put("passwd", password);
+        values.put("status", status);
+        return db.update();
     }
 
 }

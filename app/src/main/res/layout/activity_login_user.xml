@@ -15,6 +15,7 @@
         android:src="@drawable/baseline_person_24"
         android:layout_marginBottom="30dp"
         android:layout_gravity="center"
+        android:layout_margin="40dp"
         />
 
     <EditText
@@ -51,7 +52,7 @@
         android:layout_height="wrap_content"
         android:text="Iniciar Sesión"
         android:textColor="@android:color/white"
-        android:backgroundTint="@color/teal_700"
+        android:backgroundTint="@color/naranjaOscuro"
         android:layout_marginBottom="16dp"
         android:padding="12dp" />
 
@@ -68,12 +69,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Regístrate"
-        android:textColor="@color/teal_700"
+        android:textColor="@color/azulMarino"
         android:textStyle="bold"
         android:layout_gravity="center"
         android:layout_marginTop="4dp" />
 
 
-    
+
 
 </LinearLayout>

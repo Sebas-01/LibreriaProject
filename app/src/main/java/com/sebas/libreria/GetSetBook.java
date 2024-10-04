@@ -1,6 +1,6 @@
 package com.sebas.libreria;
 
-public class Book {
+public class GetSetBook {
 
     //atributos de la clase libro
 
@@ -10,7 +10,7 @@ public class Book {
     private  Integer available;
 
     //constructor con argumentos
-    public Book(){
+    public GetSetBook(){
         this.idbook = idbook;
         this.text = text;
         this.cost = cost;
